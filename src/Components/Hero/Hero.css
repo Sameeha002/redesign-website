@@ -1,0 +1,56 @@
+.hero-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 50px;
+}
+.hero-left{
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-left h2{
+    font-weight: 700;
+    font-family: var(--font);
+}
+.hero-left h3{
+    font-weight: 600;
+    color: var(--green);
+    
+}
+.hero-p{
+    font-size: 15px;
+    color: gray;
+}
+.hero-left-img{
+    max-width: 4rem;
+}
+.hero-left-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+.job-portal, .lms{
+    border: 2px solid var(--green);
+    padding: 7px;
+    outline: none;
+    background-color: white;
+    border-radius: 20px;
+    min-width: 120px;
+}
+.lms{
+    background-color: var(--green);
+    color: white;
+}
+.hero-btn{
+    font-size: 12px;
+    color: gray;
+    padding-top: 3px;
+}
+
+.hero-right img{
+    max-width: 30rem;
+    box-shadow: 12px 12px 10px rgb(189, 189, 189);
+}
