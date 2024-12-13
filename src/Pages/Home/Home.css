@@ -1,0 +1,17 @@
+.browse-internship{
+    border: none;
+    outline: none;
+    background-color: var(--green);
+    padding: 12px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 12px 12px 8px rgba(0,0,0,0.2);
+    font-weight: 600;
+}
+.browse-internship:hover{
+    background-color: white;
+    color: var(--green);
+    border: 2px solid var(--green);
+    transition: transform 0.8s ease-in-out;
+    
+}

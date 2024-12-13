@@ -14,16 +14,21 @@
     font-family: var(--font);
 }
 .hero-left h3{
+    font-size: 38px;
     font-weight: 600;
     color: var(--green);
     
 }
 .hero-p{
+    text-align:start;
+}
+.hero-p p{
     font-size: 15px;
     color: gray;
 }
 .hero-left-img{
     max-width: 4rem;
+    margin: 5px;
 }
 .hero-left-btns{
     display: flex;
@@ -45,7 +50,7 @@
     color: white;
 }
 .hero-btn{
-    font-size: 12px;
+    font-size: 11px;
     color: gray;
     padding-top: 3px;
 }
@@ -53,4 +58,10 @@
 .hero-right img{
     max-width: 30rem;
     box-shadow: 12px 12px 10px rgb(189, 189, 189);
+}
+
+@media screen and (max-width: 600px) {
+    .hero-container{
+        gap: 15px;
+    }
 }
