@@ -1,0 +1,19 @@
+.blog-card{
+    min-width: 15rem;
+    padding: 1rem;
+    background-color: white;
+    margin-top: 2rem;
+}
+.blogcard-img-top{
+    max-width: 14rem;
+}
+.blogcard-body h5{
+    padding-top: 1rem;
+    text-align: start;
+    font-weight: 700;
+}
+.blogcard-body p{
+    padding-top: 1rem;
+    font-size: 16px;
+    text-align: start;
+}

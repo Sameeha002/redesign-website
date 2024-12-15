@@ -11,12 +11,12 @@ const Internship = () => {
       <div className="card-grid1">
         <div className=" tag tag1">Internship</div>
         <div className="card-container">
-          <div class="card" style={{ width: "16rem" }}>
+          <div className="card" >
             <div className="card-front">
 
-            <img class="card-img-top" src={appdev} alt="" />
-            <div class="card-body">
-              <p class="card-text">App Development</p>
+            <img className="card-img-top" src={appdev} alt="" />
+            <div className="card-body">
+              <p className="card-text">App Development</p>
             </div>
             </div>
 
@@ -26,38 +26,38 @@ const Internship = () => {
               <button>Apply now</button>
             </div>
           </div>
-          <div class="card" style={{ width: "16rem" }}>
+          <div className="card" >
             <img
-              class="card-img-top"
+              className="card-img-top"
               src={backendDevelopment}
               alt=""
             />
-            <div class="card-body">
-              <p class="card-text">Backend Development</p>
+            <div className="card-body">
+              <p className="card-text">Backend Development</p>
             </div>
           </div>
         </div>
       </div>
       <div className="card-grid2">
         <div className="card-container">
-          <div class="card" style={{ width: "16rem" }}>
+          <div className="card">
             <img
-              class="card-img-top"
+              className="card-img-top"
               src={chatbotdev}
               alt=""
             />
-            <div class="card-body">
-              <p class="card-text">Chatbot Development</p>
+            <div className="card-body">
+              <p className="card-text">Chatbot Development</p>
             </div>
           </div>
-          <div class="card" style={{ width: "16rem" }}>
+          <div className="card">
             <img
-              class="card-img-top"
+              className="card-img-top"
               src={frontenddev}
               alt=""
             />
-            <div class="card-body">
-              <p class="card-text">Front-end Development</p>
+            <div className="card-body">
+              <p className="card-text">Front-end Development</p>
             </div>
           </div>
         </div>

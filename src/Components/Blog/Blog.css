@@ -1,0 +1,18 @@
+.blog-container{
+    margin: 30px;
+    padding: 20px;
+    background-color: #F3F4F6;
+}
+.blog-container p{
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 500;
+}
+.blog-container h2{
+    font-weight: 700;
+}
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
