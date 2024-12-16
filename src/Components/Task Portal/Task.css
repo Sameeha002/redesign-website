@@ -1,0 +1,52 @@
+.task-portal-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.task-portal-image{
+    display: grid;
+    place-items: center;
+    
+}
+.task-portal-image img{
+    max-width: 35rem;
+    box-shadow: 12px 12px 8px rgba(0, 0, 0, 0.1);
+}
+.task-portal-text h6{
+    text-align: start;
+    font-weight: 900;
+    font-size: 25px;
+}
+.task-portal-text h2{
+    text-align: start;
+    font-weight: 900;
+    font-size: 40px;
+}
+.task-portal-text p{
+    text-align: start;
+    color: gray;
+}
+.tasks-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.tasks-grid p{
+    max-width: 150px;
+    text-align: start;
+}
+
+@media screen and (max-width: 600px) {
+    .task-portal-container{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    .task-portal-image img{
+        max-width: 90%;
+        height: auto;
+    }
+    .tasks-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}

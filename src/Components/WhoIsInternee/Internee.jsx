@@ -15,7 +15,7 @@ const Internee = () => {
         <p>The ultimate platform designed to turbocharge the IT sector in Pakistan! We recognize the immense potential of talented individuals in the country and aim to bridge the gap between them and the thriving IT industry. Internee.pk offers a comprehensive range of virtual internship opportunities exclusively in the IT field.</p>
       </div>
       <div className="internee-link">
-        <p>⁀➴ Click Below ang grab your internship ⁀➴</p>
+        <p>⋆✴︎˚｡⋆ Click Below ang grab your internship ⋆✴︎˚｡⋆</p>
       </div>
     </div>
   )
