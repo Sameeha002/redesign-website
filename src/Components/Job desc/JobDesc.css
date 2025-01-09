@@ -1,0 +1,41 @@
+.job-desc-container{
+    border: 1px solid gray;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 12px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: tranform 0.2s ease-in-out, box-shadow 0.2s ease;
+
+}
+.job-desc-container:hover{
+    transform: translateY(-5px);
+
+}
+.job-name h6{
+    font-weight: 500;
+}
+.jobs-detail{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+.jobs-detail p{
+    background-color: rgb(221, 221, 221);
+    padding: 0.2rem;
+    color: rgb(78, 78, 78);
+    border-radius: 3px;
+    font-size: 13px;
+}
+.job-time-posted p{
+    font-size: 13px;
+    color: rgb(78, 78, 78);
+}
+.apply-now{
+    outline: none;
+    border: none;
+    background-color: var(--green);
+    color: white;
+    padding: .5rem;
+    border-radius: 8px;
+}
