@@ -38,6 +38,7 @@ const Hero = () => {
           {[gc, nep, pitb, see].map((e) => {
             return (
               <img
+              key={e}
                 src={e}
                 alt=""
                 className="hero-left-img"
@@ -47,7 +48,7 @@ const Hero = () => {
           <div className="hero-left-btns">
             <div>
               <button
-                class="job-portal btn-outline-success"
+                className="job-portal btn-outline-success"
                 type="submit"
               >
                 Job Portal
@@ -58,7 +59,7 @@ const Hero = () => {
             </div>
             <div>
               <button
-                class="lms btn-outline-success"
+                className="lms btn-outline-success"
                 type="submit"
               >
                 Our LMS

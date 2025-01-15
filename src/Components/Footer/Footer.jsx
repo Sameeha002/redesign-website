@@ -32,6 +32,7 @@ const Footer = () => {
         <p>Copyright &copy;2024 internee.pk</p>
         <p>All Rights Reserved.</p>
       </div>
+      
     </div>
   );
 };

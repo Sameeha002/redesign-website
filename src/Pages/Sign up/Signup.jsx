@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-// import { Navigate } from "react-router-dom";
-import "./Login.css";
+import "./Signup.css"
 import logo from "../../Assets/logo.png";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoMdEye } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../Context/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "../../Context/firebase";
+import { setDoc, doc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
@@ -41,35 +42,40 @@ const Login = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) {
       return;
     }
     const loginData = {
+      name: name,
       email: email,
       password: password,
     };
     console.log(loginData);
 
-    try {
-      await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      console.log("User is registered successfully");
-      window.location.href = " /"
-      toast.success("User is registered successfully!!", {
-        position: "top-center",
-      });
-    } catch (error) {
-      console.log(error.message);
-      toast.success(error.message, {
-        position: "bottom-center",
-      });
+    try{
+       const userCredential=  await createUserWithEmailAndPassword(auth, email, password)
+       const user =userCredential.user;
+       console.log(user);
+
+       if (user) {
+        await setDoc(doc(db, "Users" , user.uid), {
+            email: user.email,
+            name: name
+        })
+       }
+       console.log("User is registered successfully");
+       toast.success("User is registered successfully!!", {position: "top-center"})
+    }
+    catch (error) {
+        console.log(error.message)
+        toast.success(error.message, {position: "bottom-center"})
     }
   };
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -81,6 +87,16 @@ const Login = () => {
           <img src={logo} alt="" />
         </div>
         <div className="login-form-content">
+          <div className="name">
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) =>
+                setName(e.target.value.trim())
+              }
+            />
+          </div>
           <div className="login-email">
             <input
               type="email"
@@ -127,7 +143,7 @@ const Login = () => {
           <div>
             <input type="checkbox" id="rememberMe" />
             <label
-              htmlFor="rememberMe"
+              
               className="remember-text"
             >
               {" "}
@@ -135,13 +151,12 @@ const Login = () => {
             </label>
           </div>
           <div>
-            <button className="sign-in">Sign In</button>
+            <button className="sign-in">Sign Up</button>
           </div>
         </div>
-        <div className="login-forgot-password">
-          <p>Forgot Password</p>
-          <Link to="/signup">
-            <p className="new-user">New User?</p>
+        <div className="login-here">
+          <Link to="/login">
+            <p>Already have an account? Login here</p>
           </Link>
         </div>
       </form>
@@ -149,4 +164,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

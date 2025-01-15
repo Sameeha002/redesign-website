@@ -59,8 +59,15 @@ input[type="checkbox"]{
     border-radius: 5px;
 }
 .login-forgot-password{
+    display: flex;
+    gap: 6rem;
     color: var(--green);
     font-weight: 500;
+    cursor: pointer;
+}
+.new-user{
+   font-weight: 700;
+
 }
 #login-password, #login-email{
     width: 100%;

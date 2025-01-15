@@ -3,8 +3,8 @@ import './Searchbar.css'
 
 const Searchbar = () => {
   return (
-    <div class="flexbox">
-  <div class="search">
+    <div className="flexbox">
+  <div className="search">
     
     <div>
       <input type="text" placeholder="Search . . ." required/>
